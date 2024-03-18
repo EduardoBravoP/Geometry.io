@@ -4,6 +4,7 @@ import themes from '../themes';
 import Icon from '@expo/vector-icons/Feather'
 import MaterialIcon from '@expo/vector-icons/MaterialCommunityIcons'
 import {useSafeAreaInsets} from 'react-native-safe-area-context'
+import SettingsRoutes from './settings.routes';
 
 const Tab = createBottomTabNavigator();
 
@@ -33,7 +34,7 @@ const AppRoutes = () => {
         tabBarLabel: 'Objetos',
         tabBarIcon: ({color}) => <MaterialIcon name="shape-outline" size={24} color={color} />
       }} />
-      <Tab.Screen name="Settings" component={RenderView} options={{
+      <Tab.Screen name="SettingsStack" component={SettingsRoutes} options={{
         tabBarLabel: 'Ajustes',
         tabBarIcon: ({color}) => <Icon name="settings" size={22} color={color} />
       }} />
