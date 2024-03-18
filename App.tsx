@@ -14,6 +14,7 @@ import theme from './src/themes';
 import './src/repositories/client';
 import { NavigationContainer } from '@react-navigation/native';
 import Routes from './src/routes';
+import { ObjectContextWrapper } from './src/contexts/useObject';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -26,11 +27,13 @@ export default function App() {
     <NavigationContainer>
       <SafeAreaProvider>
         <ThemeProvider theme={theme}>
+          <ObjectContextWrapper>
           <StatusBar style="light" backgroundColor={theme.COLORS.BACKGROUND} translucent />
           
             <View style={{backgroundColor: theme.COLORS.BACKGROUND, flex: 1}}>
               {fontsLoaded && <Routes />}
             </View>
+          </ObjectContextWrapper>
         </ThemeProvider>
       </SafeAreaProvider>
     </NavigationContainer>
