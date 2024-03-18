@@ -1,0 +1,5 @@
+{
+  "object1": "{\"shape\":\"cube\",\"color\":\"#FF0000\",\"rotation\":\"90\"}",
+  "object2": "{\"shape\":\"cone\",\"color\":\"#FFFF00\",\"rotation\":\"45\"}",
+  "object3": "{\"shape\":\"dodecahedron\",\"color\":\"#FFFF00\",\"rotation\":\"0\"}"
+}
