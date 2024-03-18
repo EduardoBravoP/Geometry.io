@@ -45,6 +45,7 @@ const SignInView = () => {
               value={password}
               onChangeText={setPassword}
               secretInput
+              autoCapitalize="none"
             />
           </InputsWrapper>
 
