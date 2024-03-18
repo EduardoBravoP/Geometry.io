@@ -1,18 +1,26 @@
 import { useEffect, useState } from 'react'
-import defaultConfig from '../../../remote_config_defaults.json'
-import { ObjectSettingsProps } from './interface'
+import { getObjectsDefaultConfig, getUserSettings } from '../../repositories/render.repository'
+import { auth } from '../../repositories/client'
+import { useObject } from '../../contexts/useObject'
 
 const useRenderViewModel = () => {
-  const [objectSettings, setObjectSettings] = useState<ObjectSettingsProps>({} as ObjectSettingsProps)
-    
-  const getObjectsSettings = () => {
-    const objectSettings: ObjectSettingsProps = {} as ObjectSettingsProps
+  const { objectSettings, setObjectSettings } = useObject()
 
-    for (const [key, value] of Object.entries(defaultConfig)) {
-      objectSettings[key] = JSON.parse(value)
+  const getObjectsSettings = async () => {
+    const user = auth.currentUser
+    const userSettings = await getUserSettings(user.uid)
+
+    if (userSettings) {
+      setObjectSettings(userSettings)
+    } else {
+      // await saveUserSettings(user.uid, {
+      //   object1: {shape:"cube",color:"#FF00FF",rotation:90},
+      //   object2: {shape:"cone",color:"#2fff00",rotation:45},
+      //   object3: {shape:"dodecahedron",color:"#FFFF00",rotation:0}
+      // })
+
+      setObjectSettings(getObjectsDefaultConfig())
     }
-
-    setObjectSettings(objectSettings)
   }
 
   useEffect(() => {
