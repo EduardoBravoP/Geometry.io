@@ -6,21 +6,23 @@ import type { StackScreenProps } from '@react-navigation/stack';
 import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 
 export type RootStackParamList = {
-  App: NavigatorScreenParams<AppTabParamList>;
-  SignIn: undefined;
+  Render: undefined
+  SettingsStack: NavigatorScreenParams<SettingsStackParamList>
 };
 
 export type RootStackScreenProps<T extends keyof RootStackParamList> =
   StackScreenProps<RootStackParamList, T>;
 
-export type AppTabParamList = {
-  Render: undefined
+export type SettingsStackParamList = {
   Settings: undefined
+  EditObject: {
+    object: number
+  }
 }
 
-export type HomeTabScreenProps<T extends keyof AppTabParamList> =
+export type HomeTabScreenProps<T extends keyof SettingsStackParamList> =
   CompositeScreenProps<
-    BottomTabScreenProps<AppTabParamList, T>,
+    BottomTabScreenProps<SettingsStackParamList, T>,
     RootStackScreenProps<keyof RootStackParamList>
   >;
 
