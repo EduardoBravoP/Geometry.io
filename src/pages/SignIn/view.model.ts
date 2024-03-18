@@ -11,8 +11,7 @@ const useSignInViewModel = (): SignInViewModelProps => {
     try {
       setIsLoading(true)
 
-      const response = await signIn({ email, password })
-      console.log(response)
+      await signIn({ email, password })
     } catch (err) {
       console.log(err)
     } finally {
