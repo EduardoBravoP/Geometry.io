@@ -1,7 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react'
 import { StatusBar } from 'expo-status-bar';
-import SignInView from './src/pages/SignIn/view';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { View } from 'react-native';
 import {
@@ -24,16 +23,16 @@ export default function App() {
   })
 
   return (
-    <SafeAreaProvider>
-      <ThemeProvider theme={theme}>
-        <StatusBar style="light" backgroundColor={theme.COLORS.BACKGROUND} />
-        
-        <NavigationContainer>
-          <View style={{backgroundColor: theme.COLORS.BACKGROUND, flex: 1}}>
-            {fontsLoaded && <Routes />}
-          </View>
-        </NavigationContainer>
-      </ThemeProvider>
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <SafeAreaProvider>
+        <ThemeProvider theme={theme}>
+          <StatusBar style="light" backgroundColor={theme.COLORS.BACKGROUND} translucent />
+          
+            <View style={{backgroundColor: theme.COLORS.BACKGROUND, flex: 1}}>
+              {fontsLoaded && <Routes />}
+            </View>
+        </ThemeProvider>
+      </SafeAreaProvider>
+    </NavigationContainer>
   );
 }
