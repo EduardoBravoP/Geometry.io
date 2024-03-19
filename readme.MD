@@ -31,5 +31,12 @@ npm run test -u
 yarn test -u
 ```
 
+## Testes:
+Ao todo implementei 6 testes incluindo teste de snapshot, tentando utilizar diferentes funções do jest e react-testing-library, você pode visualizar os arquivos de testes nesses paths:
+`src/components/Input/input.test.tsx`
+`src/pages/EditObject/editObject.test.tsx`
+`src/pages/SignIn/signIn.snap.test.tsx`
+`src/pages/SignIn/signIn.test.tsx`
+
 ## Padrão de projeto utilizado:
 Neste projeto eu optei por utilizar a arquitetura MVVM (Model View View-Model)
