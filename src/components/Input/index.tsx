@@ -3,6 +3,7 @@ import themes from "../../themes";
 import { InputProps } from "./interface";
 import { Container, InputWrapper, Label, ShowPasswordButton, StyledTextInput } from "./styles";
 import Icon from '@expo/vector-icons/Feather'
+import useInputViewModel from "./view.model";
 
 const Input = ({
   label,
@@ -12,7 +13,7 @@ const Input = ({
   secretInput,
   ...rest
 }: InputProps) => {
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false)
+  const { isPasswordVisible, setIsPasswordVisible } = useInputViewModel()
 
   return (
     <Container>
