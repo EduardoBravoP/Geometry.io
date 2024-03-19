@@ -1,0 +1,314 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignIn /> page snapshots should render correctly 1`] = `
+<RNCSafeAreaView
+  edges={
+    {
+      "bottom": "additive",
+      "left": "additive",
+      "right": "additive",
+      "top": "additive",
+    }
+  }
+  style={
+    {
+      "backgroundColor": "#22272C",
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    keyboardShouldPersistTaps="handled"
+    style={
+      {
+        "backgroundColor": "#22272C",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "paddingBottom": 0,
+        "paddingLeft": 20,
+        "paddingRight": 20,
+        "paddingTop": 0,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          {
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "marginBottom": 32,
+            "marginTop": 24,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#FFFFFF",
+              "fontFamily": "Montserrat_600SemiBold",
+              "fontSize": 32,
+            }
+          }
+        >
+          Geometry.
+        </Text>
+        <Text
+          red={true}
+          style={
+            {
+              "color": "#DA0000",
+              "fontFamily": "Montserrat_600SemiBold",
+              "fontSize": 32,
+            }
+          }
+        >
+          io
+        </Text>
+      </View>
+      <Text
+        style={
+          {
+            "color": "#FFFFFF",
+            "fontFamily": "Montserrat_600SemiBold",
+            "fontSize": 32,
+          }
+        }
+      >
+        Entrar
+      </Text>
+      <Text
+        style={
+          {
+            "color": "#7A7D80",
+            "fontFamily": "Montserrat_400Regular",
+            "fontSize": 14,
+            "marginBottom": 32,
+            "marginTop": 8,
+          }
+        }
+      >
+        Bem vindo de volta!
+      </Text>
+      <View
+        style={
+          {
+            "gap": 16,
+          }
+        }
+      >
+        <View
+          style={{}}
+        >
+          <Text
+            style={
+              {
+                "color": "#7A7D80",
+                "fontFamily": "Montserrat_400Regular",
+                "fontSize": 12,
+                "marginBottom": 4,
+              }
+            }
+          >
+            E-mail
+          </Text>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "borderBottomLeftRadius": 12,
+                "borderBottomRightRadius": 12,
+                "borderColor": "#383D41",
+                "borderTopLeftRadius": 12,
+                "borderTopRightRadius": 12,
+                "borderWidth": 1,
+                "flexDirection": "row",
+                "gap": 16,
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <TextInput
+              autoCapitalize="none"
+              keyboardType="email-address"
+              onChangeText={[MockFunction]}
+              placeholder="Insira seu e-mail"
+              placeholderTextColor="#D3D3D3"
+              secureTextEntry={false}
+              style={
+                {
+                  "color": "#FFFFFF",
+                  "flexBasis": 0,
+                  "flexGrow": 1,
+                  "flexShrink": 1,
+                  "fontFamily": "Montserrat_400Regular",
+                  "fontSize": 14,
+                  "paddingBottom": 18,
+                  "paddingLeft": 16,
+                  "paddingRight": 16,
+                  "paddingTop": 18,
+                }
+              }
+              value="test@test.com"
+            />
+          </View>
+        </View>
+        <View
+          style={{}}
+        >
+          <Text
+            style={
+              {
+                "color": "#7A7D80",
+                "fontFamily": "Montserrat_400Regular",
+                "fontSize": 12,
+                "marginBottom": 4,
+              }
+            }
+          >
+            Senha
+          </Text>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "borderBottomLeftRadius": 12,
+                "borderBottomRightRadius": 12,
+                "borderColor": "#383D41",
+                "borderTopLeftRadius": 12,
+                "borderTopRightRadius": 12,
+                "borderWidth": 1,
+                "flexDirection": "row",
+                "gap": 16,
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <TextInput
+              autoCapitalize="none"
+              onChangeText={[MockFunction]}
+              placeholder="Insira sua senha"
+              placeholderTextColor="#D3D3D3"
+              secureTextEntry={true}
+              style={
+                {
+                  "color": "#FFFFFF",
+                  "flexBasis": 0,
+                  "flexGrow": 1,
+                  "flexShrink": 1,
+                  "fontFamily": "Montserrat_400Regular",
+                  "fontSize": 14,
+                  "paddingBottom": 18,
+                  "paddingLeft": 16,
+                  "paddingRight": 16,
+                  "paddingTop": 18,
+                }
+              }
+              value="123123"
+            />
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "opacity": 1,
+                  "paddingRight": 16,
+                }
+              }
+              testID="showPasswordButton"
+            >
+              <Text />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#3983DA",
+            "borderBottomLeftRadius": 12,
+            "borderBottomRightRadius": 12,
+            "borderTopLeftRadius": 12,
+            "borderTopRightRadius": 12,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginTop": 32,
+            "opacity": 1,
+            "paddingBottom": 18,
+            "paddingLeft": 16,
+            "paddingRight": 16,
+            "paddingTop": 18,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#FFFFFF",
+              "fontFamily": "Montserrat_600SemiBold",
+              "fontSize": 16,
+            }
+          }
+        >
+          Entrar
+        </Text>
+        <Text />
+      </View>
+    </View>
+  </RCTScrollView>
+</RNCSafeAreaView>
+`;

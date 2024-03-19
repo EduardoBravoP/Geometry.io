@@ -30,10 +30,13 @@ const Input = ({
         />
 
         {secretInput && (
-          <ShowPasswordButton onPress={() => setIsPasswordVisible(!isPasswordVisible)}>
+          <ShowPasswordButton
+            onPress={() => setIsPasswordVisible(!isPasswordVisible)}
+            testID="showPasswordButton"
+          >
             {isPasswordVisible
-              ? <Icon name="eye" color={themes.COLORS.GRAY_500} size={24} />
-              : <Icon name="eye-off" color={themes.COLORS.GRAY_500} size={24} />
+              ? <Icon name="eye" color={themes.COLORS.GRAY_500} size={24} testID="eyeIcon" />
+              : <Icon name="eye-off" color={themes.COLORS.GRAY_500} size={24} testID="eyeOffIcon" />
             }
           </ShowPasswordButton>
         )}
