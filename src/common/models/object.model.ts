@@ -1,4 +1,4 @@
-type ShapesType = 'cube' | 'cone' | 'dodecahedron'
+export type ShapesType = 'cube' | 'cone' | 'dodecahedron'
 
 export interface ObjectModel {
   shape: ShapesType;
