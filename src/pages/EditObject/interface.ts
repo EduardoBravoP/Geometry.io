@@ -6,3 +6,12 @@ export type EditObjectProps = StackScreenProps<SettingsStackParamList, 'EditObje
 export interface ColorProps {
   color: string;
 }
+
+export interface RingColorProps {
+  color: string;
+  selected?: boolean;
+}
+
+export interface ShapeSelectProps {
+  selected?: boolean;
+}

@@ -1,5 +1,5 @@
-import { ColorProps } from "@react-three/fiber";
 import styled from "styled-components/native";
+import { ColorProps, RingColorProps, ShapeSelectProps } from "./interface";
 
 export const Container = styled.View`
   flex: 1;
@@ -37,17 +37,17 @@ export const PropertyLabel = styled.Text`
   margin-bottom: 16px;
 `;
 
-export const ShapeSelectButton = styled.TouchableOpacity`
+export const ShapeSelectButton = styled.TouchableOpacity<ShapeSelectProps>`
   padding: 8px 16px;
   border-radius: 12px;
   border-width: 1px;
-  border-color: ${({theme}) => theme.COLORS.GRAY_500};
+  border-color: ${({theme, selected}) => selected ? theme.COLORS.BLUE_500 : theme.COLORS.GRAY_500};
 `;
 
-export const ShapeSelectText = styled.Text`
+export const ShapeSelectText = styled.Text<ShapeSelectProps>`
   font-family: ${({theme}) => theme.FONT_FAMILY.REGULAR};
   font-size: ${({theme}) => theme.FONT_SIZE.MD};
-  color: ${({theme}) => theme.COLORS.WHITE};
+  color: ${({theme, selected}) => selected ? theme.COLORS.BLUE_500 : theme.COLORS.WHITE};
 `;
 
 export const Color = styled.TouchableOpacity<ColorProps>`
@@ -55,7 +55,6 @@ export const Color = styled.TouchableOpacity<ColorProps>`
   height: 40px;
   border-radius: 20px;
   background-color: ${({color}) => color};
-  margin-right: 24px;
 `;
 
 export const SliderContainer = styled.View`
@@ -80,4 +79,16 @@ export const SliderValue = styled.Text`
   text-align: center;
   width: 100%;
   margin-bottom: 4px;
+`;
+
+export const RingColor = styled.View<RingColorProps>`
+  width: 48px;
+  height: 48px;
+  border-radius: 99px;
+  border-width: ${({selected}) => selected ? 2 : 0}px;
+  border-color: ${({color}) => color};
+  margin-right: 24px;
+
+  align-items: center;
+  justify-content: center;
 `;
